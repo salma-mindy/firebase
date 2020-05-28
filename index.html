@@ -49,49 +49,10 @@
             text-align: justify;
             text-justify: inter-word;
         }
-
-        .jumbotron{
+        
+        .jumbotron {
             color: rgb(8, 8, 8);
-            background-color:#aca59e5b !important;
-}
-        
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-            margin: auto;
-            text-align: center;
-            font-family: arial;
-        }
-        
-        .title {
-            color: grey;
-            font-size: 18px;
-        }
-        
-        button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            color: white;
-            background-color: #ffc107;
-            ;
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-            font-size: 18px;
-        }
-        
-        a {
-            text-decoration: none;
-            font-size: 22px;
-            color: #4532e7;
-            ;
-        }
-        
-        button:hover,
-        a:hover {
-            opacity: 0.7;
+            background-color: #aca59e5b !important;
         }
         
         blockquote {
@@ -115,6 +76,91 @@
         blockquote p {
             display: inline;
         }
+        /*Card Profile */
+        
+        .profile-card {
+            font-family: 'Open Sans', Arial, sans-serif;
+            position: relative;
+            float: left;
+            overflow: hidden;
+            width: 100%;
+            color: #ffffff;
+            text-align: center;
+            height: 368px;
+            border: none;
+        }
+        
+        .profile-card .background {
+            width: 100%;
+            vertical-align: top;
+            opacity: 0.9;
+            -webkit-filter: blur(5px);
+            filter: blur(5px);
+            -webkit-transform: scale(1.8);
+            transform: scale(2.8);
+        }
+        
+        .profile-card .card-content {
+            width: 100%;
+            padding: 15px 25px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+        
+        .profile-card .profile {
+            border-radius: 50%;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            max-width: 100px;
+            opacity: 1;
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, 1);
+            -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+        }
+        
+        .profile-card h2 {
+            margin: 0 0 5px;
+            font-weight: 600;
+            font-size: 25px;
+        }
+        
+        .profile-card h2 small {
+            display: block;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        
+        .profile-card i {
+            display: inline-block;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+            border: 1px solid #fff;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        
+        .profile-card .icon-block {
+            float: left;
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .profile-card .icon-block a {
+            text-decoration: none;
+        }
+        
+        .profile-card i:hover {
+            background-color: #fff;
+            color: #2E3434;
+            text-decoration: none;
+        }
     </style>
     <title>Firebase</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -126,7 +172,7 @@
 
     <div class="bg-text">
         <h1 style="font-size:30px">
-           Découvrons Firebase 
+            Découvrons Firebase
         </h1>
     </div>
 
@@ -136,17 +182,20 @@
                 <p>
                     <strong style="color: #000;">Firebase</strong> est une plate-forme de développement d’applications mobiles et web, soutenu par Google, pour aider les développeurs à offrir des expériences plus riches.</p>
                 <p>
-                    Elle gère sa propre infrastructure avec un ensemble d’outils pour simplifier le flux de travail du développeur en leur fournissant des kits de développement et un tableau de bord en ligne. Ces boîtes à outils sont interconnectées, évolutives et intégrables avec des logiciels tiers pour surmonter les défis complexes avec des blocs de construction standard.
+                    Elle gère sa propre infrastructure avec un ensemble d’outils pour simplifier le flux de travail du développeur en leur fournissant des kits de développement et un tableau de bord en ligne. Ces boîtes à outils sont interconnectées, évolutives et intégrables
+                    avec des logiciels tiers pour surmonter les défis complexes avec des blocs de construction standard.
                 </p>
                 <p>
-                    La plate-forme se compose d’un grand ensemble d’outils de développement. La <b>base de données en temps réel</b>  et <b>le Cloud Firestore</b>  peuvent stocker des données structurées en documents et synchroniser les applications correspondantes en millisecondes chaque fois qu’une transformation de données se produit. Cela signifie que l’application et sa base de données s’écoutent mutuellement, fournissant à l’utilisateur des expériences d’application réactive. 
+                    La plate-forme se compose d’un grand ensemble d’outils de développement. La <b>base de données en temps réel</b> et <b>le Cloud Firestore</b> peuvent stocker des données structurées en documents et synchroniser les applications correspondantes
+                    en millisecondes chaque fois qu’une transformation de données se produit. Cela signifie que l’application et sa base de données s’écoutent mutuellement, fournissant à l’utilisateur des expériences d’application réactive.
                 </p>
-                <p>	
-                    Firebase offre de nombreuses <strong style="color: #000;">fonctionnalités</strong>  telles que <em>Test A/B, App Indexing, Google Analytics, Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, Cloud Storage, Crashlytics, Dynamic Links, Hosting, In-App Messaging, ML Kit, Performance Tracking, predictions, real-time database, remote config, test lab</em>.
+                <p>
+                    Firebase offre de nombreuses <strong style="color: #000;">fonctionnalités</strong> telles que <em>Test A/B, App Indexing, Google Analytics, Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, Cloud Storage, Crashlytics, Dynamic Links, Hosting, In-App Messaging, ML Kit, Performance Tracking, predictions, real-time database, remote config, test lab</em>.
                 </p>
-                
+
                 <blockquote>
-                    " Le premier produit de Firebase était la base de données en temps réel de Firebase, une API qui synchronise les données des applications sur les appareils iOS, Android et Web et le stocke sur le cloud de Firebase. Le produit aide les développeurs de logiciels à créer des applications collaboratives en temps réel."
+                    " Le premier produit de Firebase était la base de données en temps réel de Firebase, une API qui synchronise les données des applications sur les appareils iOS, Android et Web et le stocke sur le cloud de Firebase. Le produit aide les développeurs de
+                    logiciels à créer des applications collaboratives en temps réel."
                 </blockquote>
                 <p>
                     <hr>
@@ -154,29 +203,35 @@
                 </p>
                 <p>
                     <ul>
-                        <li>Une <b>fonction Cloud (cloud functions)</b>  peut envoyer une notification à l’application chaque fois que quelque chose se passe dans la base de données. </li>
+                        <li>Une <b>fonction Cloud (cloud functions)</b> peut envoyer une notification à l’application chaque fois que quelque chose se passe dans la base de données. </li>
                         <li>Avec <b>l’authentification Firebase</b> , vous pouvez vérifier les utilisateurs à travers les connexions sociales et e-mail et les gérer en toute sécurité.</li>
-                        <li> <b>Firebase Hosting (Hébergement firebase)</b>  peut déployer du contenu statique et dynamique sur les applications Web et Cloud Storage peut accumuler et servir une énorme quantité de fichiers. </li>
-                        <li> <b>Firebase Extensions</b> , Cet outil permet aux développeurs de gagner du temps sur les tâches de développement répétitives quotidiennes. Que vous souhaitiez redimensionner des images, traduire du texte, envoyer des e-mails ou raccourcir les URL </li>
-                        <li> <b>Firebase Analytics</b>  est une solution de mesure application sans coût qui donne un aperçu de l'utilisation de l'application et de l'engagement des utilisateurs.</li>
-                        <li>il y a le <b>kit ML</b>. Ce module apporte l’apprentissage automatique à votre application avec des API prêtes à l’emploi et des modèles personnalisés utilisant Tensorflow Lite, une plate-forme d’apprentissage automatique open source de Google.</li>
-                        <li>Les performances de votre application peuvent également être surveillées en utilisant l’outil <b>Performance Monitoring</b> et <b>Test Lab</b>  teste votre application sur une gamme d’appareils pour s’assurer que tout le monde bénéficie de la même expérience utilisateur. </li>
+                        <li> <b>Firebase Hosting (Hébergement firebase)</b> peut déployer du contenu statique et dynamique sur les applications Web et Cloud Storage peut accumuler et servir une énorme quantité de fichiers. </li>
+                        <li> <b>Firebase Extensions</b> , Cet outil permet aux développeurs de gagner du temps sur les tâches de développement répétitives quotidiennes. Que vous souhaitiez redimensionner des images, traduire du texte, envoyer des e-mails ou
+                            raccourcir les URL </li>
+                        <li> <b>Firebase Analytics</b> est une solution de mesure application sans coût qui donne un aperçu de l'utilisation de l'application et de l'engagement des utilisateurs.</li>
+                        <li>il y a le <b>kit ML</b>. Ce module apporte l’apprentissage automatique à votre application avec des API prêtes à l’emploi et des modèles personnalisés utilisant Tensorflow Lite, une plate-forme d’apprentissage automatique open
+                            source de Google.</li>
+                        <li>Les performances de votre application peuvent également être surveillées en utilisant l’outil <b>Performance Monitoring</b> et <b>Test Lab</b> teste votre application sur une gamme d’appareils pour s’assurer que tout le monde bénéficie
+                            de la même expérience utilisateur. </li>
                     </ul>
                 </p>
                 <hr>
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container">
-                      <h4><u>Historique</u> :</h4>
-                <p>
-                    * <strong style="color: #000;">Firebase</strong> <br> Fondée en septembre 2011  à San Francisco au États-Unis par  James Tamplin et Andrew Lee, avant que Firebase ne devienne Firebase, c’était une startup appelée <em>Envolve</em>. <br>  Envolve a fourni aux développeurs une <b>API</b> qui permet l’intégration de fonctionnalités de chat en ligne dans leurs sites Web. Après avoir diffusé le service de chat, Tamplin et Lee ont découvert qu’il était utilisé pour transmettre des données d’application qui n’étaient pas des messages de chat. <br> Tamplin et Lee ont donc décidé de séparer le système de chat et l’architecture en temps réel qui l’alimentait. <br> Ils ont fondé Firebase en tant qu’entreprise distincte en <b>septembre 2011</b> et l’ont lancée au public le <b>12 avril 2012</b>. <br> Acquis par <b>Google en 2014</b>, Firebase a rapidement évolué vers le géant multifonctionnel d’une plate-forme mobile et web qu’il est aujourd’hui. <br>
-                    Il appartient aujourd'hui à la maison mère de Google : <a href="https://fr.wikipedia.org/wiki/Alphabet_(entreprise)">Alphabet</a>
-                </p>
-                         <div>
-                    Pour plus d'informations sur firebase, veuillez cliquer <a href="https://junto.fr/blog/firebase/">ici</a>
-                            </div>
+                        <h4><u>Historique</u> :</h4>
+                        <p>
+                            * <strong style="color: #000;">Firebase</strong> <br> Fondée en septembre 2011 à San Francisco au États-Unis par James Tamplin et Andrew Lee, avant que Firebase ne devienne Firebase, c’était une startup appelée <em>Envolve</em>.
+                            <br> Envolve a fourni aux développeurs une <b>API</b> qui permet l’intégration de fonctionnalités de chat en ligne dans leurs sites Web. Après avoir diffusé le service de chat, Tamplin et Lee ont découvert qu’il était utilisé
+                            pour transmettre des données d’application qui n’étaient pas des messages de chat. <br> Tamplin et Lee ont donc décidé de séparer le système de chat et l’architecture en temps réel qui l’alimentait. <br> Ils ont fondé Firebase
+                            en tant qu’entreprise distincte en <b>septembre 2011</b> et l’ont lancée au public le <b>12 avril 2012</b>. <br> Acquis par <b>Google en 2014</b>, Firebase a rapidement évolué vers le géant multifonctionnel d’une plate-forme
+                            mobile et web qu’il est aujourd’hui. <br> Il appartient aujourd'hui à la maison mère de Google : <a href="https://fr.wikipedia.org/wiki/Alphabet_(entreprise)">Alphabet</a>
+                        </p>
+                        <div>
+                            Pour plus d'informations sur firebase, veuillez cliquer <a href="https://junto.fr/blog/firebase/">ici</a>
+                        </div>
                     </div>
-                  </div>
-                 
+                </div>
+
 
             </div>
             <div class="col-md-3 mb-4">
@@ -233,15 +288,18 @@
                 <!--/.Carousel Wrapper-->
 
                 <h4 class="font-weight-bold mt-4"><strong>AUTEUR</strong></h4>
-                <hr class="red title-hr mb-2">
-                <div class="card">
-                    <img src="https://nsa40.casimages.com/img/2020/05/27/mini_200527064702906121.jpg" alt="John" style="width:100%">
-                    <h4 class="mt-2">Sheila-Melissa</h4>
-                    <div style="margin: 24px 0;">
-                        <a href="https://www.linkedin.com/in/anoa-sheila-melissa-aka-96a859162"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=100007165728234"><i class="fa fa-facebook"></i></a>
+                <hr class="red title-hr mb-1">
+                <div class="card profile-card">
+                    <img src="https://cdn.pixabay.com/photo/2016/08/28/16/43/hut-1626354_960_720.jpg" alt="bg-profile" class="background" />
+                    <img src="https://nsa40.casimages.com/img/2020/05/27/mini_200527064702906121.jpg" alt="profile-image" class="profile" />
+                    <div class="card-content">
+                        <h2>Sheila Melissa<small>Stagiaire développeuse web et mobile</small></h3>
+                            <div class="icon-block">
+                                <a href="https://www.linkedin.com/in/anoa-sheila-melissa-aka-96a859162"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100007165728234"><i class="fa fa-facebook"></i></a>
+                            </div>
+                            <br>
                     </div>
-                    <p><button>contacter</button></p>
                 </div>
             </div>
         </div>
